@@ -1,16 +1,12 @@
-a = []
+count = 0
 while True:    
-    x = int(input())
+    x = int(input())     
     if x == 0:
-        break
+        break    
     else:
-        a += [x]
+        print('Case ' + str(count + 1) + ': ' + str(x))
+        count += 1
 
-y = 0
-while True:    
-    if y == len(a):
-        break
-    else:
-        print('Case ' + str(y + 1) + ': ' + str( a[y]))
-        y += 1    
+
+
     
