@@ -1,16 +1,13 @@
 n = int(input())
 group = []
-while n != 0:
-    a,b1 = input().split()
-    b = int(b1)
-    group += [(a,b)]
-    n -= 1
+group = [(input().split()) for i in range(n)]
 
 scount = list(range(1,14))
 hcount = list(range(1,14))
 ccount = list(range(1,14))
 dcount = list(range(1,14))
-for (picture,figure) in group:
+for (picture,figure1) in group:
+    figure = int(figure1)
     if picture == 'S':
         scount.remove(figure)
     elif picture == 'H':
@@ -21,10 +18,10 @@ for (picture,figure) in group:
         dcount.remove(figure)
 
 for i in scount:
-    print('S ' + str(i))
+    print('S',i)
 for j in hcount:
-    print('H ' + str(j))
+    print('H',j)
 for t in ccount:
-    print('C ' + str(t))
+    print('C',t)
 for k in dcount:
-    print('D ' + str(k))
+    print('D',k)

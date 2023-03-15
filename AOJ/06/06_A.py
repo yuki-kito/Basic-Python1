@@ -1,9 +1,11 @@
 n = int(input())
 a = list(map(int,input().split()))
+x = 1
+a.reverse()
 
-while n != 0:
-    if n == 1:
-        print(a[n-1])
+for i in a:
+    if x == n:
+        print(i)
     else:
-        print(a[n-1],end = ' ')
-    n -= 1
+        print(i,end=' ')
+    x += 1
